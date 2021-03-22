@@ -1,3 +1,4 @@
+include ':androidlayout'
 include ':androiduserinterface'
 include ':app'
 rootProject.name = "JavaAndroid"
