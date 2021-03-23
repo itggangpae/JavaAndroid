@@ -1,3 +1,4 @@
+include ':eventhandling'
 include ':androidlayout'
 include ':androiduserinterface'
 include ':app'

@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/androidlayout" />
             <option value="$PROJECT_DIR$/androiduserinterface" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/eventhandling" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

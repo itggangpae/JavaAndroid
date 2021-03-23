@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/shortmsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="짧은 메시지"
+        />
+    <Button
+        android:id="@+id/longmsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="긴 메시지"
+        />
+</LinearLayout>
