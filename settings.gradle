@@ -1,3 +1,5 @@
+include ':varietyview'
+include ':resourceuse'
 include ':eventhandling'
 include ':androidlayout'
 include ':androiduserinterface'
