@@ -65,6 +65,5 @@ public class HybridActivity extends AppCompatActivity {
                 mWebView.loadUrl("javascript:showDisplayMessage('"+ sendmessage +"')");
             }
         });
-
     }
 }
