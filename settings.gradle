@@ -1,3 +1,4 @@
+include ':thread'
 include ':androidactivity'
 include ':varietyview'
 include ':resourceuse'

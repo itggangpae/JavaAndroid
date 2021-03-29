@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/eventhandling" />
             <option value="$PROJECT_DIR$/resourceuse" />
+            <option value="$PROJECT_DIR$/thread" />
             <option value="$PROJECT_DIR$/varietyview" />
           </set>
         </option>
