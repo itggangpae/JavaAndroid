@@ -1,3 +1,5 @@
+include ':androidnetwork'
+include ':localdata'
 include ':thread'
 include ':androidactivity'
 include ':varietyview'
