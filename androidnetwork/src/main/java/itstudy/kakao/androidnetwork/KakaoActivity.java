@@ -67,7 +67,7 @@ public class KakaoActivity extends AppCompatActivity {
                 message.obj = sb.toString();
                 mHandler.sendMessage(message);
             } catch (Exception e) {
-                Log.e("파싱 중 에러 발생", e.getMessage());
+                Log.e("파싱 중 에러", e.getMessage());
             }
         }
     }
