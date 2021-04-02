@@ -1,3 +1,4 @@
+include ':adapterview'
 include ':androidnetwork'
 include ':localdata'
 include ':thread'
