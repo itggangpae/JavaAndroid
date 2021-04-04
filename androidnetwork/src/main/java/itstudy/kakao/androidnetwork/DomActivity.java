@@ -93,7 +93,7 @@ public class DomActivity extends AppCompatActivity {
             mResult.setText("프로야구\n" + Result);
         }
         catch (Exception e) {
-            Toast.makeText(v.getContext(), e.getMessage(), 0).show();
+            Toast.makeText(v.getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 

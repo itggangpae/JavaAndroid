@@ -107,7 +107,6 @@ public class HaniActivity extends AppCompatActivity {
                         Node link = links.item(i);
                         Node linktext = link.getFirstChild();
                         String linkValue = linktext.getNodeValue();
-
                         sBuffer.append(titleValue + ":" + linkValue + "\n\n");
                     }
                     Message message = new Message();

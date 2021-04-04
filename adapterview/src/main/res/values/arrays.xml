@@ -17,4 +17,17 @@
         <item>Closure</item>
         <item>Ruby</item>
     </string-array>
+
+    <string-array name="departments">
+        <item>SI</item>
+        <item>SM</item>
+        <item>BackEnd</item>
+        <item>FrontEnd</item>
+        <item>FullStack</item>
+        <item>QA</item>
+        <item>DevOps</item>
+        <item>DataBase</item>
+        <item>DataAnalysys</item>
+        <item>AI</item>
+    </string-array>
 </resources>
