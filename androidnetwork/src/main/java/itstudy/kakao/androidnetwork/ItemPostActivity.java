@@ -35,19 +35,19 @@ public class ItemPostActivity extends AppCompatActivity {
     EditText priceinput;
     EditText descriptioninput;
 
-    //삽입 결과를 출력할 핸들러
+    //결과를 출력할 핸들러
     Handler handler = new Handler(Looper.getMainLooper()){
         @Override
         public void handleMessage(Message msg) {
-            String insertResult;
+            String message;
             switch(msg.what) {
                 case 0:
-                    insertResult = (String)msg.obj;
+                    message = (String)msg.obj;
                     break;
                 case 1:
-                    boolean result = (Boolean)msg.obj;
-                    if (result == true) {
-                        insertResult = "삽입 성공";
+                    boolean insertResult = (Boolean)msg.obj;
+                    if (insertResult == true) {
+                        message = "삽입 성공";
 
                         itemnameinput.setText("");
                         priceinput.setText("");
@@ -59,14 +59,23 @@ public class ItemPostActivity extends AppCompatActivity {
                         imm.hideSoftInputFromWindow(descriptioninput.getWindowToken(), 0);
                     }
                     else {
-                        insertResult = "삽입 실패";
+                        message = "삽입 실패";
+                    }
+                    break;
+                case 2:
+                    boolean deleteResult = (Boolean)msg.obj;
+                    if (deleteResult == true) {
+                        message = "삭제 성공";
+                    }
+                    else {
+                        message = "삽입 실패";
                     }
                     break;
                 default:
-                    insertResult = "결과 알 수 없음";
+                    message = "결과 알 수 없음";
                     break;
             }
-            Snackbar.make(getWindow().getDecorView().getRootView(), insertResult, Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(getWindow().getDecorView().getRootView(), message, Snackbar.LENGTH_SHORT).show();
         }
     };
 
@@ -301,10 +310,9 @@ public class ItemPostActivity extends AppCompatActivity {
                             br.close();
                             con.disconnect();
                             json = sb.toString();
-                            Log.e("문자열", json);
                         } catch (Exception e) {
                             Log.e("삭제 예외", e.getLocalizedMessage());
-                            message.obj = "삭제 에러로 파라미터 전송에 실패했거나 다운로드 실패\n서버를 확인하거나 파라미터 전송 부분을 확인하세요";
+                            message.obj = "삭제 실패:" + e.getLocalizedMessage();
                             message.what = 0;
                             handler.sendMessage(message);
                         }
@@ -312,8 +320,8 @@ public class ItemPostActivity extends AppCompatActivity {
                             try {
                                 JSONObject object = new JSONObject(json);
                                 boolean result = object.getBoolean("result");
-                                message.obj = "삭제 성공";
-                                message.what = 1;
+                                message.obj = result;
+                                message.what = 2;
                                 handler.sendMessage(message);
                             } catch (Exception e) {
                                 Log.e("삭제 예외", e.getLocalizedMessage());
