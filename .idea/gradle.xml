@@ -20,6 +20,7 @@
             <option value="$PROJECT_DIR$/eventhandling" />
             <option value="$PROJECT_DIR$/localdata" />
             <option value="$PROJECT_DIR$/resourceuse" />
+            <option value="$PROJECT_DIR$/supportlibrary" />
             <option value="$PROJECT_DIR$/thread" />
             <option value="$PROJECT_DIR$/varietyview" />
           </set>
